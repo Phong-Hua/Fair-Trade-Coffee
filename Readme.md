@@ -46,7 +46,11 @@ The contract was deployed to rinkeby testnet
 - Contract Address: [0x93EDE7c6Ac156ECE7A65f6Ef98677507748fAD9b](https://rinkeby.etherscan.io/address/0x93ede7c6ac156ece7a65f6ef98677507748fad9b)
 
 # Execution
-After download the application, navigate to app folder. In command-prompt, activate local server:
+After download the application, download neccessary node modules:
+```sh
+npm install
+```
+then activate the local server:
 ```sh
 npm run dev
 ```
