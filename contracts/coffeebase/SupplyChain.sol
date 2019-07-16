@@ -178,6 +178,10 @@ contract SupplyChain is ConsumerRole, DistributorRole, RetailerRole, FarmerRole 
 
     items[_upc] = item;
 
+    // Put to itemHistory
+    string[] memory history = new string[](8);
+    history[0] = 'Harvested';
+    itemsHistory[_upc] = history;
     // Increment sku
     sku = sku + 1;
     // Emit the appropriate event
@@ -194,6 +198,8 @@ contract SupplyChain is ConsumerRole, DistributorRole, RetailerRole, FarmerRole 
   {
     // Update the appropriate fields
     items[_upc].itemState = State.Processed;
+    // update itemHistory
+    itemsHistory[_upc][1] = 'Processed';
     // Emit the appropriate event
     emit Processed(_upc);
   }
@@ -208,6 +214,8 @@ contract SupplyChain is ConsumerRole, DistributorRole, RetailerRole, FarmerRole 
   {
     // Update the appropriate fields
     items[_upc].itemState = State.Packed;
+    // update itemHistory
+    itemsHistory[_upc][2] = 'Packed';
     // Emit the appropriate event
     emit Packed(_upc);
   }
@@ -223,6 +231,8 @@ contract SupplyChain is ConsumerRole, DistributorRole, RetailerRole, FarmerRole 
     // Update the appropriate fields
     items[_upc].productPrice = _price;
     items[_upc].itemState = State.ForSale;
+    // update itemHistory
+    itemsHistory[_upc][3] = 'For Sale';
     // Emit the appropriate event
     emit ForSale(_upc);
   }
@@ -246,6 +256,8 @@ contract SupplyChain is ConsumerRole, DistributorRole, RetailerRole, FarmerRole 
     items[_upc].itemState = State.Sold;
     // Transfer money to farmer
     items[_upc].originFarmerID.transfer(items[_upc].productPrice);
+    // update itemHistory
+    itemsHistory[_upc][4] = 'Sold';
     // emit the appropriate event
     emit Sold(_upc);
   }
@@ -261,6 +273,8 @@ contract SupplyChain is ConsumerRole, DistributorRole, RetailerRole, FarmerRole 
     {
     // Update the appropriate fields
     items[_upc].itemState = State.Shipped;
+    // update itemHistory
+    itemsHistory[_upc][5] = 'Shipped';
     // Emit the appropriate event
     emit Shipped(_upc);
   }
@@ -278,6 +292,8 @@ contract SupplyChain is ConsumerRole, DistributorRole, RetailerRole, FarmerRole 
     items[_upc].ownerID = msg.sender;
     items[_upc].retailerID = msg.sender;
     items[_upc].itemState = State.Received;
+    // update itemHistory
+    itemsHistory[_upc][6] = 'Received';
     // Emit the appropriate event
     emit Received(_upc);
   }
@@ -295,6 +311,8 @@ contract SupplyChain is ConsumerRole, DistributorRole, RetailerRole, FarmerRole 
     items[_upc].ownerID = msg.sender;
     items[_upc].consumerID = msg.sender;
     items[_upc].itemState = State.Purchased;
+    // update itemHistory
+    itemsHistory[_upc][7] = 'Purchased';
     // Emit the appropriate event
     emit Purchased(_upc);
   }
