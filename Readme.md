@@ -38,9 +38,10 @@ Star Notary Service was developed by using a following library:
 
 ![Class](UML/ClassDiagram.png)
 
-# Token Information
+# Contract Information
 The contract was deployed to rinkeby testnet
 
+- Transaction Hash: [0x46701824d9fc4eebf0246d55fe8dd302b2bc99a8d0785b778b445193c8ad4411](https://rinkeby.etherscan.io/tx/0x46701824d9fc4eebf0246d55fe8dd302b2bc99a8d0785b778b445193c8ad4411)
 - Contract Address: [0x93EDE7c6Ac156ECE7A65f6Ef98677507748fAD9b](https://rinkeby.etherscan.io/address/0x93ede7c6ac156ece7a65f6ef98677507748fad9b)
 
 # Execution
