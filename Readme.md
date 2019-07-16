@@ -20,6 +20,12 @@ Star Notary Service was developed by using a following library:
 - Truffle-hdwallet-provider v1.0.13
 - Web3 v1.0.0-beta.37
 
+# UML
+
+## Activity Diagram
+
+![Activity](UML/Activity Diagram.png)
+
 # Token Information
 The contract was deployed to rinkeby testnet
 
