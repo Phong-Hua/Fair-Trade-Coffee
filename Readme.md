@@ -24,7 +24,7 @@ Star Notary Service was developed by using a following library:
 
 ## Activity Diagram
 
-![Activity](UML/Activity Diagram.png)
+![Activity](/UML/ActivityDiagram.png)
 
 # Token Information
 The contract was deployed to rinkeby testnet
