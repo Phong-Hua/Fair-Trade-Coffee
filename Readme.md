@@ -19,7 +19,8 @@ Star Notary Service was developed by using a following library:
 - Truffle v5.0.2
 - Truffle-hdwallet-provider v1.0.13
 - Web3 v1.0.0-beta.37
-
+- IPFS. This App currently not using IPFS. In the future, IPFS can be used to store image of each item in harvesting process.
+  
 # UML
 
 ## Activity Diagram

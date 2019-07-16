@@ -75,6 +75,7 @@ App = {
         }
         // If no injected web3 instance is detected, fall back to Ganache
         else {
+            
             App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
         }
 
@@ -353,6 +354,8 @@ App = {
     }, 
 
     killContract: function() {
+        console.log("HERE");
+
         App.contracts.SupplyChain.deployed().then(function(instance) {
             return instance.kill();
           }).then(function(result) {
